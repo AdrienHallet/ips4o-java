@@ -7,6 +7,7 @@ public class BasicBenchmarkTest {
     @Test
     void basic_benchmark() {
         int[] arrayJava = TestUtils.generateRandomArray(100_000, 0, 10000);
+        int[] arrayJavaPA = Arrays.copyOf(arrayJava, arrayJava.length);
         int[] arrayIPS4o = Arrays.copyOf(arrayJava, arrayJava.length);
         int[] arrayIPS4oVT = Arrays.copyOf(arrayJava, arrayJava.length);
         int[] arrayIPS4oIVT = Arrays.copyOf(arrayJava, arrayJava.length);
@@ -19,7 +20,7 @@ public class BasicBenchmarkTest {
 
         // Benchmark Java Parallel arrays sort
         long javaPAStartTime = System.currentTimeMillis();
-        Arrays.parallelSort(arrayJava);
+        Arrays.parallelSort(arrayJavaPA);
         long javaPAEndTime = System.currentTimeMillis();
         long javaPAExecutionTime = javaPAEndTime - javaPAStartTime;
 
