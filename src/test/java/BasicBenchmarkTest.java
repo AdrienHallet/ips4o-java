@@ -1,3 +1,6 @@
+import algorithms.IPS4ONormalThreadSorter;
+import algorithms.IPS4OVirtualThreadSorter;
+import benchmark.Utils;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -6,7 +9,7 @@ public class BasicBenchmarkTest {
 
     @Test
     void basic_benchmark() {
-        int[] arrayJava = TestUtils.generateRandomArray(100_000, 0, 10000);
+        int[] arrayJava = Utils.generateRandomArray(100_000, 0, 10000);
         int[] arrayJavaPA = Arrays.copyOf(arrayJava, arrayJava.length);
         int[] arrayIPS4o = Arrays.copyOf(arrayJava, arrayJava.length);
         int[] arrayIPS4oVT = Arrays.copyOf(arrayJava, arrayJava.length);

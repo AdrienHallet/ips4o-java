@@ -1,6 +1,8 @@
+package benchmark;
+
 import java.util.Random;
 
-public class TestUtils {
+public class Utils {
 
     public static int[] generateRandomArray(int size, int min, int max) {
         int[] array = new int[size];

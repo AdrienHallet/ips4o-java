@@ -1,4 +1,4 @@
-import java.util.Arrays;
+package algorithms;
 
 import java.util.Arrays;
 
